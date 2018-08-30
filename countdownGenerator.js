@@ -1,10 +1,8 @@
 var countdownGenerator = function (x) {
-  let count = x;
 
   return function() {
-    let result = "";
 
-    result += (((count > 0) ? ("T-minus " + count + "...") : "") + ((count === 0) ? "Blast Off!" : "") + ((count-- < 0) ? "Rockets already gone, bub!" : ""));
+    let result = ( (x > 0) ? ("T-minus " + x-- + "...") : ( (x-- === 0) ? "Blast Off!" : "Rockets already gone, bub!") );
 
     return console.log(result);
   }
